@@ -1,0 +1,123 @@
+body {
+	margin: 0;
+}
+
+.nameplate-fixed > a {
+	text-decoration: none;
+	position: fixed;
+	display: inline-block;
+	background-color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: #ff8c00;
+	font-size: 30px;
+	padding: 15px;
+	opacity: 0.9;
+	left: 20px;
+	top: 20px;
+	border-radius: 50%;
+}
+
+.banner-thingy {
+	height: 400px;
+	line-height: 400px;
+	background-position: center center;
+	text-align: center;
+}
+
+.say-my-name {
+	margin: 0;
+	background-color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: #ff8c00;
+	font-size: 40px;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+	padding: 10px;
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
+.menu-thingy > ul {
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 300px;
+	overflow: hidden;
+}
+
+.menu-thingy > ul > li {
+	float: left;
+	margin: 0;
+}
+
+.menu-thingy > ul > li > a {
+	display: block;
+    text-align: center;
+    width: 100px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: #ff8c00;
+	font-size: 20px;
+}
+
+.menu-thingy > ul > li > a:hover {
+	background-color: #fff6e5;
+}
+
+hr {
+	width: 200px;
+	height: 0.5px;
+	background-color: #ff8c00;
+	border: 0.5px solid #ff8c00;
+}
+
+.content {
+	text-align: left;
+	width: 600px;
+	margin: 0 auto;
+}
+
+.heading {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	color: #ff8c00;
+	font-size: 25px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.content-body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+	padding-bottom: 100px;
+}
+
+@media screen and (max-width: 767px) {
+	.content {
+		width: 80%;
+	}
+	.say-my-name {
+		font-size: 30px;
+	}
+	.nameplate-fixed {
+		font-size: 20px;
+	}
+	.heading {
+		font-size: 18px;
+	}
+	.content-body {
+		font-size: 16px;
+		line-height: 25px;
+	}
+}
