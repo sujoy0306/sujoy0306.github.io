@@ -79,6 +79,20 @@ hr {
 	border: 0.5px solid #ff8c00;
 }
 
+.me {
+	float: right;
+	margin: 20px;
+	border: 2px dotted black;
+	height: auto;
+}
+
+.ju {
+	float: left;
+	margin: 20px 20px 20px 0;
+	border: 2px dotted black;
+	height: auto;
+}
+
 .content {
 	text-align: left;
 	width: 600px;
@@ -99,10 +113,17 @@ hr {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
-	line-height: 30px;
+	line-height: 28px;
 	padding-bottom: 100px;
 }
 
+@media screen and (max-width: 320px) {
+	.say-my-name {
+		font-size: 21px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
 @media screen and (max-width: 767px) {
 	.content {
 		width: 80%;
@@ -121,5 +142,15 @@ hr {
 	.content-body {
 		font-size: 16px;
 		line-height: 25px;
+	}
+	.me {
+		margin: 10px auto;
+		float: none;
+		width: 98%;
+	}
+	.ju {
+		margin: 10px auto;
+		float: none;
+		width: 98%;
 	}
 }
