@@ -1,0 +1,30 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name:
+    detail: Synopsys
+    i18n: company_a
+  desc:
+    detail: Currently working...
+    i18n: company_a_desc
+  date:
+    detail: Jun. 2019
+    i18n: company_a_date
+  job:
+    detail: R&D-1 Engineer
+    i18n: company_a_job
+  icon: fa-plus-square
+  present: true
+
+- name:
+    detail: Jadavpur University
+    i18n: company_b
+  desc:
+    detail: Graduated
+    i18n: company_b_desc
+  date:
+    detail: Jun. 2019
+    i18n: company_b_date
+  job:
+    detail: B.Tech Computer Science Engineering
+    i18n: company_b_job
+  icon: fa-plus-square

@@ -1,39 +1,68 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Sujoy Banik | About</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-	<div class="nameplate-fixed"><a href="index.html">SK</a></div>
-	<header>
-		<div class="banner-thingy" style="background-image: url(images/front.jpg);">
-			<p class="say-my-name">Sujoy Kansabanik</p>
-		</div>
-		<div class="menu-thingy">
-			<ul>
-				<li><a href="index.html">About</a></li>
-				<li><a href="school.html">School</a></li>
-				<li><a href="skills.html">Skills</a></li>
-			</ul>
-		</div>
-		<hr>
-	</header>
-	<div class="content">
-		<div class="heading">OK, you got me: I'm Sujoy Kansabanik</div>
-		<div class="content-body">
-			<p>The journey of life came on June 3rd ,1996. That was the day my parents blessed me with the name Sujoy Kansabanik.</p>
-			<p>The path my life has taken so far has been a steady one with very few times that I've gone off course. I look at my life as a gift and try my hardest not to take it for granted. <img class="me" src="images/sujoy.jpg">The years I have spent on this earth have been more than amazing and I imagine they are more than I could have ever asked for. I spend the majority of my time with the ones I love most, like my family and closest friends.</p>
-			<p>They are the ones that keep my head on straight and help me succeed at the goals I set for myself. If it weren't for the people who love me the most and the fortunate home I have grown up in I don't know where in the world I would be today.</p>
-			<p>As I said before, I spend most of my hours with my family and closest friends. My friends are my backbone and my family is my strength and wisdom. There are three friends in my life that I spend every waking moment with. They are my best friends and they are the ones that help me in hard times and hold me up when I need the extra support. That is why I consider them my 'backbone'.</p>
-			<p>It's obvious that my family and friends mean more than anything to me but there are other things in my life that I have a deep passion for. These things include mathematics, computer-science, and statistics and my ambition to succeed in life.I like to code and web-design.I participate in different coding competitions in Code-cheff and Hackerrank.I read Computer Science in Jadavpur University and I aspire to become a good programmer.</p>
-			<p>That's my life in a nut-shell but if you want to know more about the real me continue on throughout this website!</p>
-		</div>
-	</div>
-	<footer>
-		
-	</footer>
-</body>
-</html>
+---
+layout: blog
+title: index
+permalink: /
+---
+
+<div class="navbar-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right" id="i18_navbar">
+          {% for section in site.data.landing %}
+          <li>
+            {% if section.page %}
+              <a class="page-scroll" href="{{ section.page}} ">
+            {% else %}
+              <a class="page-scroll" href="{{ section.id | prepend: '#'}} ">
+            {% endif %}
+              <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
+            </a>
+          </li>
+          {% endfor %}
+          {% for language in site.data.index.language %}
+          <li>
+            <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
+              <img src="{{ language.flag | prepend: site.baseurl }}" height="16" width="16">
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+{% if site.index_carousel %}
+{% include carousel.html %}
+{% endif %}
+
+{% for section in site.data.landing %}
+{% assign loopindex = forloop.index | modulo: 2 %}
+<section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0;">
+  {% include sections/{{section.tpl}} %}
+</section>
+{% endfor %}
+<style>
+iframe {
+  -moz-transform: scale(0.25, 0.25);
+  -webkit-transform: scale(0.25, 0.25);
+  -o-transform: scale(0.25, 0.25);
+  -ms-transform: scale(0.25, 0.25);
+  transform: scale(0.25, 0.25);
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+</style>
+<!-- <iframe src="https://www.maimemo.com/share/page/?uid=779139&pid=660" style="display: none;"></iframe> -->
