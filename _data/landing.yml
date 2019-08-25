@@ -15,7 +15,7 @@
 - id: skills
   i18n: nav.skills
   name: Skills
-  tpl: skills.html
+  tpl: skills.yml
   css: team
 
 - id: projects
